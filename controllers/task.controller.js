@@ -563,16 +563,6 @@ exports.updateTask = async (req, res, next) => {
 };
 
 
-
-
-
-
-
-
-
-
-
-
 // ADD THIS NEW FUNCTION - Get My Tasks (for Member, Project Lead, Team Lead)
 exports.getMyTasks = async (req, res, next) => {
   try {
@@ -694,13 +684,3 @@ exports.getAssignedTasks = async (req, res, next) => {
 };
 
 
-// EXISTING getAllTasks function - Keep as is, just add comment
-// This function is for general task listing with filters
-// For "My Tasks" specific view, use getMyTasks() function above
-
-
-// UPDATE createTask validation - Already correct in your code
-// The validation in createTask already checks:
-// 1. If assignee is a member of the project (including projectlead, teamlead)
-// 2. Permission based on assigner role
-// No changes needed here - your existing logic is correct

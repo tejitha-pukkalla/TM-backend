@@ -299,58 +299,6 @@ exports.removeProjectMember = async (req, res, next) => {
   }
 };
 
-
-
-
-// Replace the existing getProjectMembers function with this:
-
-// exports.getProjectMembers = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-
-//     // Check if project exists
-//     const project = await Project.findById(id);
-//     if (!project) {
-//       return res.status(404).json({
-//         success: false,
-//         message: 'Project not found',
-//         timestamp: new Date().toISOString()
-//       });
-//     }
-
-//     // Fetch members from ProjectMember collection
-//     const members = await ProjectMember.find({ 
-//       projectId: id,
-//       isActive: true 
-//     })
-//     .populate('userId', 'name email department profilePic globalRole isActive')
-//     .populate('assignedBy', 'name email');
-
-//     // Filter out any members with null/undefined userId (deleted users)
-//     const activeMembers = members.filter(member => member.userId && member.userId.isActive);
-
-//     res.status(200).json({
-//       success: true,
-//       data: activeMembers,
-//       count: activeMembers.length,
-//       timestamp: new Date().toISOString()
-//     });
-//   } catch (error) {
-//     console.error('Error fetching project members:', error);
-//     res.status(500).json({
-//       success: false,
-//       message: 'Failed to fetch project members',
-//       error: error.message,
-//       timestamp: new Date().toISOString()
-//     });
-//   }
-// };
-
-
-
-
-
-
 // Replace the existing getProjectMembers function with this:
 
 exports.getProjectMembers = async (req, res) => {
