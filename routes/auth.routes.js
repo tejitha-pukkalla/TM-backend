@@ -38,11 +38,11 @@ const loginValidation = [
 // PUBLIC ROUTES (NO AUTH REQUIRED)
 // ===========================================
 
-// // Check if setup is needed (MUST BE FIRST - before any validation)
-// router.get('/setup-status', authController.getSetupStatus);
+// Check if setup is needed (MUST BE FIRST - before any validation)
+router.get('/setup-status', authController.getSetupStatus);
 
-// // First time setup (create first superadmin)
-// router.post('/setup', setupValidation, authController.setupSuperadmin);
+// First time setup (create first superadmin)
+router.post('/setup', setupValidation, authController.setupSuperadmin);
 
 // Login
 router.post('/login', loginValidation, authController.login);
