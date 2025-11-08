@@ -78,5 +78,44 @@ module.exports = {
     COMMENT: 'comment',
     FILE: 'file',
     COMPLETION: 'completion'
+  
+  
+  },
+
+  
+  // Attendance Status
+  ATTENDANCE_STATUS: {
+    PRESENT: 'present',
+    ABSENT: 'absent',
+    HALF_DAY: 'half-day',
+    ON_LEAVE: 'on-leave',
+    HOLIDAY: 'holiday',
+    WEEKEND: 'weekend'
+  },
+
+  // Break Types
+  BREAK_TYPES: {
+    TEA_BREAK: 'tea-break',
+    LUNCH_BREAK: 'lunch-break',
+    SHORT_BREAK: 'short-break',
+    PERSONAL: 'personal'
+  },
+
+  // Work Session Status
+  WORK_SESSION_STATUS: {
+    ACTIVE: 'active',
+    ON_BREAK: 'on-break',
+    COMPLETED: 'completed'
+  },
+
+  // Attendance Business Rules
+  ATTENDANCE_RULES: {
+    MAX_BREAKS_PER_DAY: 4,
+    MAX_BREAK_DURATION_MINUTES: 15,
+    MAX_TOTAL_BREAK_MINUTES: 60,
+    STANDARD_WORK_HOURS: 8,
+    HALF_DAY_HOURS: 4,
+    LATE_ARRIVAL_MINUTES: 30, // 9:00 AM + 30 min = 9:30 AM
+    EARLY_DEPARTURE_MINUTES: 30 // 6:00 PM - 30 min = 5:30 PM
   }
 };
